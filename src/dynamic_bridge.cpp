@@ -189,8 +189,8 @@ void update_bridge(
     try {
       bridge.bridge_handles = ros1_bridge::create_bridge_from_1_to_2(
         ros1_node, ros2_node,
-        bridge.ros1_type_name, topic_name, 10,
-        bridge.ros2_type_name, topic_name, ros2_publisher_qos);
+        bridge.ros1_type_name, topic_name, 1,
+        bridge.ros2_type_name, topic_name, 1);
     } catch (std::runtime_error & e) {
       fprintf(
         stderr,
